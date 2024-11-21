@@ -1,31 +1,45 @@
 //====================================================================================================
+.footer {
+   padding: rem(27) 0;
+   // .footer__container
+
+   &__container {}
+
+   // .footer__bottom
+
+   &__bottom {}
+}
 
 //====================================================================================================
 .copyright {
 
    // .copyright__wrapper
 
-   &__wrapper {}
+   &__wrapper {
+      max-width: 1125px;
+      margin: 0 auto;
+   }
 
    // .copyright__body
 
    &__body {
       display: grid;
-      grid-template-columns: repeat(2, auto) 1fr auto;
+      grid-template-columns: repeat(4, auto);
       column-gap: 50px;
       row-gap: 8px;
       justify-items: start;
+      justify-content: space-between;
 
       @media (max-width:$xl) and (min-width:$lg) {
          grid-template-columns: auto 1fr auto;
       }
 
       @media (max-width:$lg) {
-         grid-template-columns: repeat(2, 1fr);
+         grid-template-columns: 1fr auto;
          justify-items: center;
       }
 
-      @media (max-width:$md) {
+      @media (max-width:$sm) {
          grid-template-columns: 1fr;
       }
    }
@@ -36,8 +50,6 @@
       font-size: 14px;
       line-height: 22px;
 
-      @media (min-width:$lg) {}
-
       @media (max-width:$xl) and (min-width:$lg) {
 
          &:nth-child(3) {
@@ -47,18 +59,38 @@
       }
 
       @media (max-width:$lg) {
-         text-align: center;
+         grid-column: 1/2;
+         justify-self: start;
+      }
+
+      @media (max-width:$sm) {
+         grid-column: auto;
+         grid-row: auto;
+         // justify-self: center;
       }
 
       &:last-child {
          display: flex;
          align-items: center;
          gap: 7px;
-         color: #757575;
+         color: #9f1919;
 
          @media (max-width:$xl) and (min-width:$lg) {
-            grid-row: 2/3;
+            grid-row: 1/2;
             grid-column: 3/4;
+         }
+
+         @media (max-width:$lg) {
+            grid-column: 2/3;
+            grid-row: 1;
+            // text-align: right;
+            justify-self: end;
+         }
+
+         @media (max-width:$sm) {
+            grid-column: auto;
+            grid-row: auto;
+            justify-self: start;
          }
       }
    }
@@ -68,5 +100,9 @@
    &__svg {
       width: 75px;
       height: 13px;
+
+      use {
+         fill: #9f1919;
+      }
    }
 }

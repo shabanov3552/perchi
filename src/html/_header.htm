@@ -4,6 +4,9 @@
 <head>
 	<title>@@title</title>
 	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
 	<link rel="stylesheet" href="css/style.min.css">
@@ -16,5 +19,24 @@
 	<div class="wrapper @@modClass">
 		<header class="header">
 			<div class="header__container">
+				<a href="" class="header__logo"><img src="@img/logo.svg" alt=""></a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">О компании</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Каталог</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Скидки и условия</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Доставка и оплата</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+						</ul>
+						<a href="tel:+74991123777" class="menu__phone">+7 (499) 1-123-777</a>
+					</nav>
+				</div>
+				<a href="tel:+74991123777" class="header__phone">
+					<span>+7 (499) 1-123-777</span>
+					<img src="@img/icons/icon_phone.svg" alt="" class="header__phone-icon">
+				</a>
+				<button type="button" class="header__order-btn">Заказать</button>
 			</div>
 		</header>

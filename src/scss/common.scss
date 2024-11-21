@@ -1,1 +1,22 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.button-black {
+   border-radius: 31px;
+   background: #000;
+   font-weight: 700;
+   font-size: 24px;
+   text-align: center;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 203px;
+   height: 62px;
+   transition: opacity 0.3s ease 0s;
+
+   @media (any-hover: hover) {
+      &:hover {
+         opacity: 0.8;
+      }
+   }
+}
