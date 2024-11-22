@@ -59,10 +59,11 @@ body::after {
 		visibility: hidden;
 		transform: translate(120%, 0px);
 		transition: all 0.6s ease 0s;
-		background: #fff;
-		max-width: 667px;
+		background: rgb(255, 255, 255);
+		max-width: 808px;
 		width: 100%;
 		height: 100%;
+		border-radius: 20px;
 
 		.popup_show & {
 			visibility: visible;
@@ -73,6 +74,7 @@ body::after {
 			transform: scale(0);
 			height: auto;
 			max-height: 100%;
+			overflow: auto;
 		}
 
 		.popup_center.popup_show & {
@@ -86,15 +88,24 @@ body::after {
 		.lock & {
 			visibility: visible;
 		}
+
+		.popup_detail & {
+			border-radius: 0;
+			max-width: 100%;
+		}
 	}
 
 	// .popup__close
 
 	&__close {
 		outline: none;
-		width: 22px;
-		height: 22px;
-		flex: 0 0 22px;
+		width: 23px;
+		height: 23px;
+		flex: 0 0 23px;
+		position: absolute;
+		top: 36px;
+		top: 34px;
+		right: 36px;
 
 		svg {
 			height: 100%;
@@ -112,21 +123,20 @@ body::after {
 	// .popup__text
 
 	&__text {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 26px;
-		max-width: 586px;
-		margin-bottom: rem(52);
+		margin-bottom: rem(45);
+		text-align: center;
 	}
 
 	// .popup__header
 
 	&__header {
-		border-bottom: 1px solid #CACACA;
-		padding: rem(40);
-		padding-left: rem(54);
-		padding-right: rem(65);
+		padding: rem(0) rem(78);
+		padding-top: rem(69);
+		padding-bottom: rem(18);
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 
 		@media (max-width:$md) {
@@ -162,8 +172,12 @@ body::after {
 	// .popup__title
 
 	&__title {
-		font-size: 36px;
-		font-weight: 800;
+		font-style: italic;
+		font-weight: 700;
+		font-size: 48px;
+		text-align: center;
+		color: #000;
+		line-height: 163%;
 
 		@media (max-width:$md) {
 			font-size: 25px;
@@ -183,7 +197,15 @@ body::after {
 	&__main {
 		padding: rem(24) rem(60) rem(50);
 		overflow: auto;
-		height: calc(100% - 121px);
+		height: calc(100% - 183px);
+
+		.popup_center & {
+			height: auto;
+			overflow: visible;
+			display: grid;
+			justify-content: center;
+			justify-items: center;
+		}
 
 		#policy &,
 		#consent & {
@@ -270,11 +292,84 @@ body::after {
 
 	// .popup__form
 
-	&__form {}
+	&__form {
+		.form {
+			display: grid;
+			justify-items: center;
+			justify-content: center;
+			// .form__line
 
-	// .popup__icon
+			&__line {
+				max-width: 306px;
+				width: 100%;
+				margin: 0 auto;
 
-	&__icon {}
+				&:not(:last-child) {
+					margin-bottom: rem(10);
+				}
+			}
+
+			// .form__label
+
+			&__label {
+				color: #000;
+			}
+
+			// .form__input
+
+			&__input {
+				border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+				color: #000;
+			}
+
+			// .form__clear-svg
+
+			&__clear-svg {}
+
+			// .form__footer
+
+			&__footer {
+				display: grid;
+				justify-items: center;
+				justify-content: center;
+				margin-top: rem(20);
+			}
+
+			// .form__button
+
+			&__button {
+				margin-bottom: rem(26);
+				font-weight: 400;
+				font-size: 20px;
+			}
+
+			// .form__consent
+
+			&__consent {
+				font-size: 14px;
+				line-height: 200%;
+			}
+
+			// .form__consent-link
+
+			&__consent-link {
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	// .popup__button
+
+	&__button {
+		&.button-black {
+			font-weight: 400;
+			font-size: 20px;
+		}
+	}
 }
 
 //#endregion
