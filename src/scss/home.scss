@@ -352,8 +352,15 @@
          padding-bottom: rem(52);
       }
 
+      @media (max-width:em(679.98)) {
+         padding-top: rem(38);
+         padding-bottom: rem(52);
+      }
+
       @media (max-width:$xs) {
          background-position: 24% center;
+         padding-top: rem(38);
+         padding-bottom: rem(52);
       }
    }
 

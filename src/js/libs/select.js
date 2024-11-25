@@ -492,6 +492,9 @@ class SelectConstructor {
 	// Реакция на измененение оригинального select
 	selectChange(e) {
 		const originalSelect = e.target;
+		if (e.isTrusted === false) {
+			return; // Прерываем, если событие вызвано программно
+		}
 		this.selectBuild(originalSelect);
 		this.setSelectChange(originalSelect);
 	}
@@ -511,8 +514,7 @@ class SelectConstructor {
 		}
 		const selectItem = originalSelect.parentElement;
 
-		var evt = document.createEvent("HTMLEvents");
-		evt.initEvent("change", false, true);
+		const evt = new Event("change", { bubbles: false, cancelable: true });
 		originalSelect.dispatchEvent(evt);
 
 		// Вызов коллбэк функции

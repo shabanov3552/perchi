@@ -2614,6 +2614,10 @@ body::after {
   .first-block__footnote {
     font-size: 20px
   }
+  .about-regal__container {
+    padding-top: 2.375rem;
+    padding-bottom: 3.25rem
+  }
 }
 @media (max-width:36.06125em) {
   .copyright__body {
@@ -2658,7 +2662,9 @@ body::after {
     padding-top: 3.5625rem
   }
   .about-regal__container {
-    background-position: 24% center
+    background-position: 24% center;
+    padding-top: 2.375rem;
+    padding-bottom: 3.25rem
   }
   .discounts-block__nav-btn {
     font-size: 18px

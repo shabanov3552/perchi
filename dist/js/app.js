@@ -4814,6 +4814,7 @@
             }
             selectChange(e) {
                 const originalSelect = e.target;
+                if (e.isTrusted === false) return;
                 this.selectBuild(originalSelect);
                 this.setSelectChange(originalSelect);
             }
@@ -4827,8 +4828,10 @@
                     tempButton.remove();
                 }
                 const selectItem = originalSelect.parentElement;
-                var evt = document.createEvent("HTMLEvents");
-                evt.initEvent("change", false, true);
+                const evt = new Event("change", {
+                    bubbles: false,
+                    cancelable: true
+                });
                 originalSelect.dispatchEvent(evt);
                 this.selectCallback(selectItem, originalSelect);
             }
