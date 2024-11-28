@@ -6,10 +6,10 @@
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20241125232708" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20241128015513" rel="stylesheet">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241125232708">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241128015513">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +24,11 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link">О компании</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Каталог</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Скидки и условия</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Доставка и оплата</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+							<li class="menu__item"><a href="#company" data-goto="#company" class="menu__link">О компании</a></li>
+							<li class="menu__item"><a href="#catalog" data-goto="#catalog" class="menu__link">Каталог</a></li>
+							<li class="menu__item"><a href="#discounts" data-goto="#discounts" class="menu__link">Скидки и условия</a></li>
+							<li class="menu__item"><a href="#delivery" data-goto="#delivery" class="menu__link">Доставка и оплата</a></li>
+							<li class="menu__item"><a href="#contacts" data-goto="#contacts" class="menu__link">Контакты</a></li>
 						</ul>
 						<a href="tel:+74991123777" class="menu__phone">+7 (499) 1-123-777</a>
 					</nav>
@@ -54,7 +54,7 @@
 					<div class="first-block__image-ibg"><img src="img/first-block-image.webp" alt=""></div>
 				</div>
 			</div>
-			<div class="about-block">
+			<div class="about-block" id="company">
 				<div class="about-block__container">
 					<div class="about-block__content">
 						<div class="about-block__text">
@@ -95,7 +95,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="catalog-block">
+			<div class="catalog-block" id="catalog">
 				<div class="catalog-block__container">
 					<div class="catalog-block__title">Перчатки хлопчатобумажные</div>
 					<div class="catalog-block__subtitle">Цены действительны по состоянию на сегодняшний день и могут меняться в зависимости от поставок нового товара</div>
@@ -208,7 +208,7 @@
 				</div>
 			</div>
 			<div class="terms">
-				<div class="terms__container">
+				<div class="terms__container" id="delivery">
 					<div class="terms__title">Условия</div>
 					<div class="terms__main">
 						<div class="terms__item">Минимальная партия отгрузки – 100&nbsp;пар</div>
@@ -217,7 +217,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="discounts-block">
+			<div class="discounts-block" id="discounts">
 				<div class="discounts-block__container">
 					<div class="discounts-block__title">Скидки</div>
 					<div data-tabs class="discounts-block__main">
@@ -425,7 +425,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="contacts-block">
+			<div class="contacts-block" id="contacts">
 				<div class="contacts-block__container">
 					<div class="contacts-block__title">Контакты</div>
 					<div class="contacts-block__row">
@@ -508,7 +508,7 @@
 					<div class="form-page__inner">
 						<div class="form-page__title">Остались вопросы?</div>
 						<div class="form-page__subtitle">Заполните форму и наш специалист свяжется с вами!</div>
-						<form action="" class="form-page__form form">
+						<form action="" class="form-page__form form" data-parsley-validate data-parsley-trigger="change">
 							<div class="form__line">
 								<label for="" class="form__label">Ваше имя *</label>
 								<input required id="" type="text" name="" class="form__input">
@@ -558,8 +558,8 @@
 									window.onload = () => document.querySelector('.js-copyright-year').innerText = new Date().getFullYear();
 								</script>
 							</div>
-							<a href="" data-popup="#policy" class="copyright__item">Политика конфиденциальности</a>
-							<a href="" data-popup="#consent" class="copyright__item">Согласие на обработку персональных данных</a>
+							<a href="policy.html" class="copyright__item">Политика конфиденциальности</a>
+							<a href="consent.html" class="copyright__item">Согласие на обработку персональных данных</a>
 							<a href="https://websalt.ru" target="_blank" class="copyright__item">Создание сайта
 								<svg class="copyright__svg">
 									<use xlink:href="img/icons/icons.svg#logo_salt"></use>
@@ -580,13 +580,13 @@
 						<div class="product-detail__main">
 							<div class="product-slider">
 								<div class="product-slider__main swiper">
-									<div class="product-slider__wrapper swiper-wrapper">
-										<div class="product-slider__slide swiper-slide"><img src="img/detail-1.webp" alt=""></div>
-										<div class="product-slider__slide swiper-slide"><img src="img/detail-2.webp" alt=""></div>
-										<div class="product-slider__slide swiper-slide"><img src="img/detail-3.webp" alt=""></div>
-										<div class="product-slider__slide swiper-slide"><img src="img/detail-1.webp" alt=""></div>
-										<div class="product-slider__slide swiper-slide"><img src="img/detail-2.webp" alt=""></div>
-										<div class="product-slider__slide swiper-slide"><img src="img/detail-3.webp" alt=""></div>
+									<div class="product-slider__wrapper swiper-wrapper" data-gallery>
+										<a href="img/detail-1.webp" class="product-slider__slide swiper-slide"><img src="img/detail-1.webp" alt=""></a>
+										<a href="img/detail-2.webp" class="product-slider__slide swiper-slide"><img src="img/detail-2.webp" alt=""></a>
+										<a href="img/detail-3.webp" class="product-slider__slide swiper-slide"><img src="img/detail-3.webp" alt=""></a>
+										<a href="img/detail-1.webp" class="product-slider__slide swiper-slide"><img src="img/detail-1.webp" alt=""></a>
+										<a href="img/detail-2.webp" class="product-slider__slide swiper-slide"><img src="img/detail-2.webp" alt=""></a>
+										<a href="img/detail-3.webp" class="product-slider__slide swiper-slide"><img src="img/detail-3.webp" alt=""></a>
 									</div>
 								</div>
 								<div class="product-slider__thumbs swiper">
@@ -789,8 +789,8 @@
 		</div>
 		<!-- Заказать звонок -->
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20241125232708" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="js/app.min.js?_v=20241125232708"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20241128015513" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20241128015513"></script>
 </body>
 
 </html>

@@ -140,15 +140,15 @@ body::after {
 		align-items: center;
 
 		@media (max-width:$md) {
-			padding: rem(30);
+			padding: rem(30) rem(70);
 		}
 
 		@media (max-width: em(679.98)) {
-			padding: rem(15);
+			padding: rem(15) rem(70);
 		}
 
 		@media (max-width:$xs) {
-			padding: rem(10);
+			padding: rem(10) rem(70);
 		}
 
 		.video-popup &,
@@ -189,6 +189,11 @@ body::after {
 			#consent & {
 				font-size: 20px;
 			}
+		}
+
+		@media (max-width:$xxs) {
+			line-height: 110%;
+			font-size: 22px;
 		}
 	}
 
@@ -320,6 +325,10 @@ body::after {
 			&__input {
 				border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 				color: #000;
+
+				&.parsley-error {
+					border-bottom: 2px solid var(--red-error);
+				}
 			}
 
 			// .form__clear-svg

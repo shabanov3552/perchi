@@ -75,7 +75,11 @@ textarea {
 		}
 
 		&.parsley-error {
-			border: 2px solid var(--red-error);
+			border-bottom: 2px solid var(--red-error);
+
+			.form-page & {
+				border-bottom: 2px solid #fff;
+			}
 		}
 	}
 
@@ -140,6 +144,10 @@ textarea {
 	padding: rem(10) 0;
 	color: var(--red-error);
 	margin-bottom: rem(-20);
+
+	.form-page & {
+		color: #fff;
+	}
 }
 
 //</FORM>

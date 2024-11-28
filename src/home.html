@@ -16,7 +16,7 @@
          <div class="first-block__image-ibg"><img src="@img/first-block-image.png" alt=""></div>
       </div>
    </div>
-   <div class="about-block">
+   <div class="about-block" id="company">
       <div class="about-block__container">
          <div class="about-block__content">
             <div class="about-block__text">
@@ -57,7 +57,7 @@
          </div>
       </div>
    </div>
-   <div class="catalog-block">
+   <div class="catalog-block" id="catalog">
       <div class="catalog-block__container">
          <div class="catalog-block__title">Перчатки хлопчатобумажные</div>
          <div class="catalog-block__subtitle">Цены действительны по состоянию на сегодняшний день и могут меняться в зависимости от поставок нового товара</div>
@@ -170,7 +170,7 @@
       </div>
    </div>
    <div class="terms">
-      <div class="terms__container">
+      <div class="terms__container" id="delivery">
          <div class="terms__title">Условия</div>
          <div class="terms__main">
             <div class="terms__item">Минимальная партия отгрузки – 100&nbsp;пар</div>
@@ -179,7 +179,7 @@
          </div>
       </div>
    </div>
-   <div class="discounts-block">
+   <div class="discounts-block" id="discounts">
       <div class="discounts-block__container">
          <div class="discounts-block__title">Скидки</div>
          <div data-tabs class="discounts-block__main">
@@ -387,7 +387,7 @@
          </div>
       </div>
    </div>
-   <div class="contacts-block">
+   <div class="contacts-block" id="contacts">
       <div class="contacts-block__container">
          <div class="contacts-block__title">Контакты</div>
          <div class="contacts-block__row">
@@ -470,7 +470,7 @@
          <div class="form-page__inner">
             <div class="form-page__title">Остались вопросы?</div>
             <div class="form-page__subtitle">Заполните форму и наш специалист свяжется с вами!</div>
-            <form action="" class="form-page__form form">
+            <form action="" class="form-page__form form" data-parsley-validate data-parsley-trigger="change">
                <div class="form__line">
                   <label for="" class="form__label">Ваше имя *</label>
                   <input required id="" type="text" name="" class="form__input">
